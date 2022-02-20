@@ -521,10 +521,10 @@ html,body {
 	border: 1px solid #e6e6e6;
 	border-right: 0;
 	box-sizing: border-box;
-	border-radius: 5px 0 0 5px;
+	border-radius:  3px;
 }
 .subscribe__input:focus {
-	color: #000;
+	color: #000
 }
 
 .subscribe__button {
@@ -540,10 +540,11 @@ html,body {
 	color: #fff;
 	transition: all 0.3s ease 0s;
 	padding: 0px 22px;
+	margin: 0 0 0 -1px;
 }
-.subscribe__button:hover {
+/*.subscribe__button:hover {
 	background: #ca6137;
-}
+}*/
 /* --------------------------------------------------- */
 .footer__top {
 	background: #17213c;
@@ -625,4 +626,20 @@ html,body {
 }
 .social__item:not(:last-child) {
 	margin: 0px 20px 0px 0px;
+}
+
+
+
+
+
+.subscribe__body {
+
+  opacity: 0;
+  transform: translateX(200px);
+}
+
+.subscribe__body.element-show {
+  opacity: 1;
+  transition: all 1.5s;
+  transform: translateX(0%);
 }

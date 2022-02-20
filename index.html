@@ -10,6 +10,7 @@
 		<!-- aos library -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<title>Teeth&Smile</title>
+		<!-- <link rel="icon" href="img/booking/10.png"> -->
 	</head>
 	<body>
 		<div class="wrapper">
@@ -42,9 +43,7 @@
 								Welcome to Dental Clinic Teeth&Smile.
 							</div>
 							<div class="main-block__buttons">
-								<a target="blank" href="booking.html" class="main-block__button main-block__button_orange">Book an Appointment</a>
-							<audio src="bothOfUs.mp3" id="backgroundSong"></audio>
-							<button class="main-block__button main-block__button_orange" id="button" onclick="backgroundMusic()">Music</button>
+								<a target="blank" href="booking.html" class="main-block__button main-block__button_orange" id="main-block__button__music">Book an Appointment</a>
 							</div>
 						</div>
 					</div>
@@ -181,14 +180,11 @@
 				</section>
 				<section class="page__subscribe subscribe" id="contactUs">
 					<div class="subscribe__container _container">
-						<div class="subscribe__body" data-aos="fade-left"
-							data-aos-offset="300"
-							data-aos-easing="ease-in-sine">
-						
+						<div class="subscribe__body"  ><!-- data-aos="fade-left" -->
 							<h4 class="subscribe__title">Subscribe For Latest Newsletter</h4>
 							<form action="#" class="subscribe__form">
 								<input autocomplete="off" type="email" required name="form[]" placeholder="Your Email" class="subscribe__input">
-								<button type="submit" class="subscribe__button">Subscribe</button>
+								<button type="submit" class="subscribe__button" id="laka">Subscribe</button>
 							</form>
 						</div>
 					</div>
@@ -230,7 +226,7 @@
 			</footer>
 		</div>
 		<script src="js/main.js" charset="UTF-8"></script>
-		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-		<script>AOS.init();</script>
+<!-- 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>AOS.init();</script> -->
 	</body>
 </html>
