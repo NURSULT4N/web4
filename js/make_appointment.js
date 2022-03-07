@@ -1,3 +1,4 @@
+localStorage.setItem("user", undefined);
 
  function isIncorrectPassword(password){
     var symbols = 0;
@@ -39,27 +40,69 @@
     return false;
 }
 
-function valid(form){
+function signValid(form){
     var fail = false;
     var password = form.password.value;
     var email = form.email.value;
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    var name = form.name.value;
 
     if (mailformat.test(email)){
         document.getElementById("emailValidator").innerHTML = "";
     }
-    if (!name) {
-        document.getElementById("nameValidator").innerHTML = "Enter your name"
-        fail = true;
-    }else if (!mailformat.test(email)){
-        document.getElementById("emailValidator").innerHTML = "invalid email";
+    if (!mailformat.test(email)){
+        document.getElementById("emailValidator").innerHTML = "Invalid email | Email@example.com";
         fail = "true";
+    }else if (localStorage.getItem(email) == null){
+        document.getElementById("emailValidator").innerHTML = "Your email is not found. You should register";
+        fail = true;
     }else if(isIncorrectPassword(password)){
         fail = "true";
         document.getElementById("passwordValidator").innerHTML = isIncorrectPassword(password);
     }
     if (!fail){
+        localStorage.setItem("user", JSON.parse(localStorage.getItem(email)).Name);
+        window.location = "index.html";
+    }
+
+}
+
+function regValid(form){
+    var fail = false;
+    var password = form.password.value;
+    var email = form.email.value;
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var repassword = form.repassword.value;
+    var name = form.name.value;
+    
+    if (mailformat.test(email)){
+        document.getElementById("emailValidator").innerHTML = "";
+    }
+    if (name) {
+        document.getElementById("nameValidatorReg").innerHTML = "";
+    }
+    if (!isIncorrectPassword(password)){
+        document.getElementById("passwordValidator1").innerHTML = "";
+    }
+    if (!name) {
+        document.getElementById("nameValidatorReg").innerHTML = "Enter your name"
+        fail = true;
+    }else if(name.length > 12){
+        document.getElementById("nameValidatorReg").innerHTML = "your nickname must be less than 12 letters";
+        fail = true;
+    }else if (!mailformat.test(email)){
+        document.getElementById("emailValidatorReg").innerHTML = "Invalid email | Email@example.com";
+        fail = "true";
+    }else if(isIncorrectPassword(password)){
+        fail = true;
+        document.getElementById("passwordValidator1").innerHTML = isIncorrectPassword(password);
+    }else if(repassword != password){
+        fail = true;
+        document.getElementById("passwordValidator2").innerHTML = "Passwords are not same";
+    }
+    if (!fail){
+        const client = {Name: name, Email: email, Password: password};
+        localStorage.setItem(email, JSON.stringify(client));
+        localStorage.setItem("user", name);
         window.location = "index.html";
     }
 
