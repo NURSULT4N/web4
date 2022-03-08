@@ -55,9 +55,9 @@ function signValid(form){
     }else if (localStorage.getItem(email) == null){
         document.getElementById("emailValidator").innerHTML = "Your email is not found. You should register";
         fail = true;
-    }else if(isIncorrectPassword(password)){
+    }else if(password != JSON.parse(localStorage.getItem(email)).Password){
         fail = "true";
-        document.getElementById("passwordValidator").innerHTML = isIncorrectPassword(password);
+        document.getElementById("passwordValidator").innerHTML = "Incorrect password";
     }
     if (!fail){
         localStorage.setItem("user", JSON.parse(localStorage.getItem(email)).Name);
