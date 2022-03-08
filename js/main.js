@@ -1,3 +1,8 @@
+if (localStorage.getItem("user") != undefined && localStorage.getItem("user") != null){
+  document.getElementById("main-block__button__music").innerHTML = JSON.parse(localStorage.getItem("user"));
+  document.getElementById("main-block__button__music").href="AdminPanel.html";
+}
+
 $(document).ready(function() {
 $("#laka").click(function(){
     alert("Thank you for subscribing to our newsletter!");
