@@ -1,13 +1,15 @@
 html {
 	height: 100%;
 }
+#form{
+	padding-top: 120px;
+}
 body {
 	height: 100%;
 	display: -ms-flexbox;
-	display: flex;
+	/*display: flex;*/
 	-ms-flex-align: center;
 	align-items: center;
-	padding-top: 40px;
 	padding-bottom: 40px;
 	background-color: #f5f5f5;
 }
@@ -63,3 +65,12 @@ body {
 	color: red;
 	font-size: 12px;
 }
+#Login_list{
+	padding-left: 550px;
+	margin-bottom: 100px;
+}
+input[type=password], input[type=text] {
+  border: 1px #b6e7f9 solid;
+  padding: 5px 10px;
+}
+
