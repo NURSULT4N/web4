@@ -40,3 +40,8 @@ $(document).ready(function() {
 		}
 	}
 });
+
+function Leave () {
+	localStorage.setItem("user", "undefined");
+	window.location = "index.html";
+}
