@@ -1,4 +1,4 @@
-if (localStorage.getItem("user") != "undefined"){
+if (localStorage.getItem("user") != "undefined" && localStorage.getItem("user") != null){
   document.getElementById("main-block__button__music").innerHTML = localStorage.getItem("user");
   document.getElementById("main-block__button__music").href="AdminPanel.html";
 }
