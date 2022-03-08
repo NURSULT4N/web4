@@ -5,7 +5,6 @@ if (localStorage.getItem("user") != "undefined"){
 
 $(document).ready(function() {
 $("#laka").click(function(){
-    $(this).hide();
     alert("Thank you for subscribing to our newsletter!");
   });
 
@@ -22,10 +21,8 @@ $("#laka").mouseenter(function(){
 document.head.insertAdjacentHTML('beforeend', `<link rel="icon" href="img/booking/10.png">`);
 
 var backgroundSong = document.getElementById("main-block__button__music");
-backgroundSong.insertAdjacentHTML('afterend', `<audio src="bothOfUs.mp3" id="backgroundSong"></audio>`);
+backgroundSong.insertAdjacentHTML('afterend', `<audio src="clickSound.mp3" id="backgroundSong"></audio>`);
 
-var button = document.getElementById("main-block__button__music");
-button.insertAdjacentHTML('afterend', `<button class="main-block__button main-block__button_orange" id="button" onclick="backgroundMusic()">Music</button>`);
 
 
 
@@ -44,7 +41,7 @@ function backgroundMusic(){
 
 function scal1(){
   document.querySelector('#services__column_1').style.transform = "scale(1.1)";
-  document.querySelector("#services__column_1").style.transitionDuration = "1s";}
+  document.querySelector("#services__column_1").style.transitionDuration = "0.2s";}
 
 function scalNone1(){
   document.querySelector('#services__column_1').style.transform = "none";}
@@ -52,7 +49,7 @@ function scalNone1(){
 
 function scal2(){
   document.querySelector('#services__column_2').style.transform = "scale(1.1)";
-  document.querySelector("#services__column_2").style.transitionDuration = "1s";}
+  document.querySelector("#services__column_2").style.transitionDuration = "0.2s";}
 
 function scalNone2(){
   document.querySelector('#services__column_2').style.transform = "none";}
@@ -60,7 +57,7 @@ function scalNone2(){
 
 function scal3(){
   document.querySelector('#services__column_3').style.transform = "scale(1.1)";
-  document.querySelector("#services__column_3").style.transitionDuration = "1s";}
+  document.querySelector("#services__column_3").style.transitionDuration = "0.2s";}
 
 function scalNone3(){
   document.querySelector('#services__column_3').style.transform = "none";}
@@ -124,16 +121,6 @@ var elements = document.querySelectorAll('.subscribe__body');
 for (var elm of elements) {
   observer.observe(elm);
 }
-
-
-// document.querySelector(".subscribe__body").style.opacity = "0.1";
-// document.querySelector(".subscribe__body").style.transform = "translateX(200px)";
-
-// document.querySelector(".subscribe__body.element-show").style.opacity = "1";
-// document.querySelector(".subscribe__body.element-show").style.transition = "all 1.5s";
-// document.querySelector(".subscribe__body.element-show").style.transform = "translateX(0%)";
-
-
 
 
 
