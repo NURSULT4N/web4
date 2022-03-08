@@ -1,6 +1,7 @@
 document.querySelector("h2").style.marginBottom = '25px';
 document.querySelector("h2").style.marginTop = '15px';
 
+//localStorage.setItem("user", "undefined");
 
 $(document).ready(function() {
 
@@ -17,8 +18,15 @@ $(document).ready(function() {
 			let nodePassword = document.createElement("td");	
 			let otmena = document.createElement("span");
 			otmena.classList.add("closebtn");
-			otmena.addEventListener(onclick, function(){
-				this.parentElement.style.display='none';
+			otmena.addEventListener("click", function(){
+				if (name == localStorage.getItem("user")){
+					localStorage.setItem("user", "undefined");
+					localStorage.removeItem(email);
+					window.location = "index.html";
+				}else {
+					localStorage.removeItem(email);
+					location.reload();
+				}
 			});
 			otmena.innerHTML = "x";
 			nodeName.innerHTML= name;
