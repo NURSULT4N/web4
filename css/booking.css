@@ -66,7 +66,9 @@ body {
 	font-size: 12px;
 }
 #Login_list{
-	padding-left: 550px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
 	margin-bottom: 100px;
 }
 input[type=password], input[type=text] {
