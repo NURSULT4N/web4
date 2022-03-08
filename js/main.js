@@ -1,8 +1,3 @@
-if (localStorage.getItem("user") != "undefined" && localStorage.getItem("user") != null){
-  document.getElementById("main-block__button__music").innerHTML = localStorage.getItem("user");
-  document.getElementById("main-block__button__music").href="AdminPanel.html";
-}
-
 $(document).ready(function() {
 $("#laka").click(function(){
     alert("Thank you for subscribing to our newsletter!");
@@ -22,7 +17,6 @@ document.head.insertAdjacentHTML('beforeend', `<link rel="icon" href="img/bookin
 
 var backgroundSong = document.getElementById("main-block__button__music");
 backgroundSong.insertAdjacentHTML('afterend', `<audio src="clickSound.mp3" id="backgroundSong"></audio>`);
-
 
 
 
